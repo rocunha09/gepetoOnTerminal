@@ -1,4 +1,5 @@
 import sys
+import time
 import requests
 import json
 from properties import API_KEY
@@ -42,5 +43,12 @@ res = req.json()
 
 message = res['choices'][0]['message']['content']
 
-print(message)
+print("\n----------------------------------------------------------------------\n")
 
+for caractere in message:
+    print(caractere, end='', flush=True)
+    time.sleep(0.1)
+
+#print(message)
+
+print("----------------------------------------------------------------------\n")
